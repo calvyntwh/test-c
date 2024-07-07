@@ -71,7 +71,10 @@ int printOddNumber(int array[10]) // TODO: need to fix
         printf("\n\n\tArray contents\n\t======================");
         for(counter = 0; counter < 10; counter++)
             {
-                printf("%d",counter);
+                if(array[counter] % 2 != 0)
+                    {
+                        printf("\n\tarray[%d] = %d", counter+1, array[counter]);
+                    }
             }
     }
 

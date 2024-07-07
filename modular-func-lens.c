@@ -8,6 +8,9 @@
 // Declare function prototypes
 void promptArray(int array[], int len);
 void printArray(int array[], int len);
+int findSmallest(int array[], int len);
+int findLargest(int array[], int len);
+int printOddNumber(int array[], int len);
 
 int main()
 {
@@ -21,6 +24,15 @@ int main()
 
     promptArray(array, len);
     printArray(array, len);
+    
+    
+    // Smallest of the array
+    printf("\n\n\tSmallest of the array = %d", findSmallest(array, len));
+    
+    // Largest of the array
+    printf("\n\n\tLargest of the array = %d", findLargest(array, len));
+    
+    printOddNumber(array, len);
     
     return 0;
 }
@@ -45,3 +57,53 @@ void printArray(int array[], int len)
                 printf("\n\tarray[%d] = %d", counter+1, array[counter]);
             }
     }
+    
+int findSmallest(int array[], int len)
+    {
+
+        int counter = 0;
+        int smallest = array[0];    // assume num1 is the smallest
+        
+        for(counter = 0; counter < len; counter++)
+            {
+                if (smallest > array[counter])
+                    {
+                        smallest = array[counter];
+                    }
+            }
+            
+    return smallest;
+    
+    }
+
+int findLargest(int array[], int len)
+    {
+        int counter = 0;
+        int largest = array[0];    // assume num1 is the smallest
+
+        for(counter = 0; counter < len; counter++)
+            {
+                if (largest < array[counter])
+                    {
+                        largest = array[counter];
+                    }
+            }
+            
+    return largest;
+    
+    }
+    
+
+int printOddNumber(int array[], int len)
+    {
+        int counter = 0;
+        printf("\n\n\tArray odd contents\n\t======================");
+        for(counter = 0; counter < len; counter++)
+            {
+                if(array[counter] % 2 != 0)
+                    {
+                        printf("\n\tarray[%d] = %d", counter+1, array[counter]);
+                    }
+            }
+    }
+ 
