@@ -30,6 +30,7 @@ int main()
     // print the result
     printf("\n\tThe smallest of %d, %d and %d is %d", num1, num2, num3, smallest);
     printf("\n\tThe largest of %d, %d and %d is %d", num1, num2, num3, largest);    
+    printNum(num1, num2, num3);
     
     return 0;
 }
